@@ -1,19 +1,13 @@
+import  calcular  from "./tratar.js";
+
 const app = document.getElementById("app");
 
 const p = document.createElement("p");
 
 const idade = 15;
 
-if (idade >= 18 && idade <= 50) {
-  console.log("Voce é maior de idade tem " + idade + " anos");
-  p.textContent = "Voce é maior de idade tem " + idade + " anos";
-  app.appendChild(p);
-} else if (idade < 18) {
-    console.log("Voce é menor de idade tem " + idade + " anos");
-    p.textContent = "Voce é menor de idade tem " + idade + " anos";
-    app.appendChild(p);
-} else {
-    console.log("Voce é idoso tem " + idade + " anos");
-    p.textContent = "Voce é idoso tem " + idade + " anos";
-    app.appendChild(p);
-}
+const calculado = calcular(idade);
+
+p.textContent = calculado;
+
+app.appendChild(p);
